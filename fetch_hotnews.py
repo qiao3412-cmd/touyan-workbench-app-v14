@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-投研工作台 v13 · 今日热点推送 真实数据源（每日 08:30 自动运行）
+投研工作台 v14 · 今日热点推送 真实数据源（每日 08:30 自动运行）
 - 主源：新浪新闻多频道滚动接口（真实、公开、可靠），返回标题/摘要/来源发布时间(ctime)/原文链接
 - 热度辅助：微博实时热搜榜（带 num 热度值），作为"最热/有爆点"信号
 - 流程：全频道实时池(今天真实新闻) -> 政治/经济/科技/社会按分类取 Top1
@@ -14,7 +14,7 @@ import json, re, sys, subprocess, datetime, ssl
 from collections import Counter
 from urllib.request import Request, urlopen
 
-REPO  = r"G:/Workbuddy/publish/touyan-workbench-app-v13"
+REPO  = r"G:/Workbuddy/publish/touyan-workbench-app-v14"
 INDEX = REPO + r"/index.html"
 UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
 
@@ -218,7 +218,7 @@ def main():
     subprocess.run(["git", "-C", REPO, "add", "-A"], check=True)
     subprocess.run(["git", "-C", REPO, "commit", "-m", "每日热点资讯更新 %s" % ts], check=True)
     subprocess.run(["git", "-C", REPO, "push", "origin", "main"], check=True)
-    print("PUSHED -> qiao3412-cmd.github.io/touyan-workbench-app-v13")
+    print("PUSHED -> qiao3412-cmd.github.io/touyan-workbench-app-v14")
 
 if __name__ == "__main__":
     main()

@@ -642,7 +642,7 @@ body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica N
       <div class="hot-head">
         <span class="hot-head-icon">🔥</span>
         <span class="hot-head-title">今日热点推送</span>
-        <span class="hot-head-sub"><span>最后获取资讯时间</span><span>2026-08-17 18:05:53</span></span><span>2026-08-17 17:59:34</span></span><span>2026-08-17 17:56:03</span></span><span>2026-08-17 17:54:02</span></span><span>2026-08-17 17:52:29</span></span><span>2026-08-17 17:51:19</span></span><span>2026-08-17 17:46:56</span></span><span>2026-08-17 16:57:20</span></span>
+        <span class="hot-head-sub"><span>最后获取资讯时间</span><span>2026-08-17 18:33:12</span></span><span>2026-08-17 16:57:20</span></span>
       </div>
       <div class="hot-list" id="hot-news-list"></div>
       <div class="hot-more" onclick="goPage('report')">查看完整《盘前核心情报日报》 →</div>
@@ -1582,14 +1582,285 @@ var samplePolicy=[
 ];
 
 /* 今日热点（首页必现） */
-var sampleHotNews=[{"time": "17:05", "tag": "政治", "tagCls": "tag-pol", "title": "伊朗称美国违反谅解备忘录 导致60天谈判期失去意义", "summary": "伊朗外交部发言人伊斯梅尔·巴盖伊在每周例行记者会上表示，由于美国违反谅解备忘录，导致旨在达成更长期协议的谈判从未启动，因…", "impact": "中性：关注国际关系与政策信号的边际变化", "dir": "flat", "url": "https://finance.sina.com.cn/world/2026-08-17/doc-ininrkkm6911506.shtml"}, {"time": "14:46", "tag": "军事", "tagCls": "tag-mil", "title": "全球关键航运要道运费集体创纪录，供应链成本或进一步抬高", "summary": "过去一个月，战争与气候变化叠加，正把全球多条核心航运通道的运费推至历史高位。巴拿马运河、莱茵河、红海、黑海以及受霍尔木兹…", "impact": "中性：关注地缘与国防动态对避险情绪的扰动", "dir": "flat", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-17/doc-ininrean0186029.shtml"}, {"time": "16:54", "tag": "经济", "tagCls": "tag-eco", "title": "Jain Global在亚洲增聘人手并扩大办公空间 迎接Millennium资金进驻", "summary": "知情人士透露，Jain Global正在亚洲增聘人手并扩大香港办公空间，为以Millennium Management的…", "impact": "中性：关注宏观与流动性对权益资产定价的传导", "dir": "flat", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-17/doc-ininrkkr7781860.shtml"}, {"time": "14:28", "tag": "科技", "tagCls": "tag-tec", "title": "英伟达高管将于周二造访LG电子机器人研发中心", "summary": "业内消息人士周一透露，英伟达高级总监黄敏珊（Madison Huang）——英伟达首席执行官黄仁勋之女，计划于本周晚些时…", "impact": "中性：关注技术突破与产业趋势带来的主题机会", "dir": "flat", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-17/doc-ininreat7785084.shtml"}, {"time": "17:52", "tag": "社会", "tagCls": "tag-soc", "title": "李稻葵：胖东来硬刚房东看似爽文实则双输", "summary": "8月7日，胖东来创始人于东来在一场直播中对外宣布，已经运营24年的许昌胖东来生活广场，租约到期后将于2026年12月底永…", "impact": "中性：关注民生事件的社会影响与政策关注", "dir": "flat", "url": "https://finance.sina.com.cn/chanjing/wddc/2026-08-17/doc-ininrkkn9098615.shtml"}, {"time": "18:01", "tag": "文化", "tagCls": "tag-cul", "title": "“买咖啡像在随份子” 瑞幸七夕联名“翻车”：半数网友拒绝为素人情侣买单，店员透露“都没卖出去几杯”", "summary": "文 | 《BUG》栏目 陈思竹 “明明动漫、漫画中受人喜欢、知名度高的CP（情侣）有很多。但瑞幸为什么要联动个真人情侣？…", "impact": "中性：关注文娱消费与大众情绪走向", "dir": "flat", "url": "https://finance.sina.com.cn/chanjing/gsnews/2026-08-17/doc-ininrkkr7833359.shtml"}];
+var sampleHotNews=[{"time": "17:05", "tag": "政治", "tagCls": "tag-pol", "title": "伊朗称美国违反谅解备忘录 导致60天谈判期失去意义", "summary": "伊朗外交部发言人伊斯梅尔·巴盖伊在每周例行记者会上表示，由于美国违反谅解备忘录，导致旨在达成更长期协议的谈判从未启动，因…", "impact": "中性：关注国际关系与政策信号的边际变化", "dir": "flat", "url": "https://finance.sina.com.cn/world/2026-08-17/doc-ininrkkm6911506.shtml"}, {"time": "18:16", "tag": "军事", "tagCls": "tag-mil", "title": "壁垒高筑，景气上行！展芯股份：如何在军工模拟芯片赛道突围？", "summary": "来源：市值风云 作者 |beyond 编辑 |小白 用“正向自定义”撕开军工芯片固有格局。 如果要在A股军工半导体配套企…", "impact": "中性：关注地缘与国防动态对避险情绪的扰动", "dir": "flat", "url": "https://finance.sina.com.cn/stock/s/2026-08-17/doc-ininrqsp7717770.shtml"}, {"time": "16:54", "tag": "经济", "tagCls": "tag-eco", "title": "Jain Global在亚洲增聘人手并扩大办公空间 迎接Millennium资金进驻", "summary": "知情人士透露，Jain Global正在亚洲增聘人手并扩大香港办公空间，为以Millennium Management的…", "impact": "中性：关注宏观与流动性对权益资产定价的传导", "dir": "flat", "url": "https://finance.sina.com.cn/stock/usstock/c/2026-08-17/doc-ininrkkr7781860.shtml"}, {"time": "17:59", "tag": "科技", "tagCls": "tag-tec", "title": "支付宝：“阿宝”已完成万余项服务AI化接入，服务跨端已支持5大手机品牌、16家主流车企", "summary": "支付宝生态合作伙伴大会在杭州召开。 蚂蚁集团首席执行官韩歆毅表示，智能体商业将在未来6-12个月迎来爆发...", "impact": "偏多：关注技术突破与产业趋势带来的主题机会", "dir": "bull", "url": "https://finance.sina.com.cn/tech/it/2026-08-17/doc-ininrkkm6941575.shtml"}, {"time": "17:52", "tag": "社会", "tagCls": "tag-soc", "title": "李稻葵：胖东来硬刚房东看似爽文实则双输", "summary": "8月7日，胖东来创始人于东来在一场直播中对外宣布，已经运营24年的许昌胖东来生活广场，租约到期后将于2026年12月底永…", "impact": "中性：关注民生事件的社会影响与政策关注", "dir": "flat", "url": "https://finance.sina.com.cn/chanjing/wddc/2026-08-17/doc-ininrkkn9098615.shtml"}, {"time": "18:01", "tag": "文化", "tagCls": "tag-cul", "title": "“买咖啡像在随份子” 瑞幸七夕联名“翻车”：半数网友拒绝为素人情侣买单，店员透露“都没卖出去几杯”", "summary": "文 | 《BUG》栏目 陈思竹 “明明动漫、漫画中受人喜欢、知名度高的CP（情侣）有很多。但瑞幸为什么要联动个真人情侣？…", "impact": "中性：关注文娱消费与大众情绪走向", "dir": "flat", "url": "https://finance.sina.com.cn/chanjing/gsnews/2026-08-17/doc-ininrkkr7833359.shtml"}];
 
 
 
+/* ===== 深度投研 / 事件推演 示例数据（模板） ===== */
+var sampleDeepReports=[{"id":1,"code":"300750","name":"宁德时代","rating":"强烈关注","score":78,"date":"2026-08-12","content":"【示例模板 · 请在对话中调用「调用诊断Skill，分析 300750」生成真实报告后替换】\n九维体检框架：业务拆解 / 核心财务（近5期）/ 盈利质量 / 估值 / 股东筹码 / 机构观点 / 产业链 / 风险扫描 / 综合评分。\n综合评分：基本面 82 / 成长性 78 / 估值吸引力 70 / 机构认可 85 / 风险可控度 74。\n（此条为版式示例，非真实体检结论，不构成投资建议。）"}];
+var sampleSimReports=[{"id":1,"event":"央行发布二季度货币政策执行报告","dir":"利好","strength":"中","date":"2026-08-12","content":"【示例模板 · 请在对话中调用「调用推演Skill，分析 央行二季度货币政策报告」生成真实推演后替换】\n五步推演框架：事件定性 → 传导路径（宏观→行业→公司）→ 受益/受损板块 → 核心标的（iFinD真实行情）→ 三情景推演 + 观察信号与证伪条件。\n（此条为版式示例，非真实推演结论，不构成投资建议。）"}];
 
+/* ===== 自选股基础数据池 ===== */
+var sampleWatchlist=['300750','600519','688981'];
+var STOCKS={
+  '300750':{
+    code:'300750',name:'宁德时代',market:'深交所 · 创业板',industry:'动力电池',listDate:'2018-06-11',
+    price:198.60,changePct:2.31,mktCap:'4,720亿',pe:'18.6',low52:'142.00',high52:'224.50',
+    intro:'宁德时代新能源科技股份有限公司是全球领先的动力电池系统提供商，专注于新能源汽车动力电池系统、储能系统的研发、生产和销售，连续多年位居全球动力电池装机量第一，是新能源产业链的核心龙头。',
+    business:['动力电池系统（三元锂/磷酸铁锂）','储能系统（工商业及电网侧储能）','电池材料与回收（邦普循环）'],
+    advantages:['全球动力电池装机量连续7年第一，市占率超35%','麒麟电池、神行超充电池等差异化产品矩阵领先','与特斯拉、宝马、大众、蔚来等全球主流车企深度绑定'],
+    risks:['上游锂、钴等原材料价格波动影响成本端','行业竞争加剧（比亚迪、中创新航、LG等扩产）','海外政策不确定性（欧盟反补贴税、美国IRA法案）'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[890,1020,1150,1280],netProfit:[105,123,140,158],roe:[4.2,4.8,5.1,5.6],grossMargin:[22.1,22.8,23.5,24.2],debtRatio:[55.2,54.8,53.9,52.6]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-2.1,1.2,3.4,-0.8,2.5,4.1,1.8,-1.2,2.3,5.6],
+      today:{labels:['超大单','大单','中单','小单'],values:[3.2,1.8,-0.6,-0.9]},
+      northHold:[8.2,8.4,8.1,8.5,8.7,8.9,8.8,9.0,9.2,9.5]
+    }
+  ,
+    analysis:{score:{total:82,valuation:75,technical:85,capital:88,fundamental:80},valuation:{pe:{value:18.6,industry:25.2,status:'undervalued'},pb:{value:4.8,industry:5.5,status:'undervalued'},peg:{value:0.85,status:'undervalued'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:68},capitalScore:{mainForce:88,north:85,turnover:75},earnings:{epsGrowth:28.5,targetPrice:235,consensus:'buy'},risk:{market:42,industry:48,financial:35,policy:55,liquidity:28}}
+  },
+  '600519':{
+    code:'600519',name:'贵州茅台',market:'上交所 · 主板',industry:'白酒',listDate:'2001-08-27',
+    price:1486.00,changePct:0.62,mktCap:'18,680亿',pe:'24.8',low52:'1210.00',high52:'1520.00',
+    intro:'贵州茅台酒股份有限公司是中国高端白酒绝对龙头，主营茅台酒及系列酒的生产与销售。凭借不可复制的赤水河产区、微生物环境和百年品牌积淀，构建了极深的品牌护城河，是A股最具代表性的核心资产。',
+    business:['茅台酒（飞天茅台为核心大单品）','茅台系列酒（茅台1935、茅台王子等）','其他业务（财务公司、葡萄酒等）'],
+    advantages:['品牌壁垒极深，定价权行业最强，批价体系稳定','直销渠道占比提升带动吨价与利润率上行','高分红+高ROE，机构底仓型核心资产'],
+    risks:['宏观经济下行影响高端白酒消费需求','白酒行业库存周期与批价波动','政策端对酒类消费的限制性政策风险'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[450,480,510,545],netProfit:[225,240,255,272],roe:[8.1,8.6,9.0,9.5],grossMargin:[91.5,91.8,92.0,92.2],debtRatio:[21.3,20.8,20.2,19.6]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[1.2,-0.8,0.6,2.3,-1.1,0.9,1.5,-0.4,0.7,1.1],
+      today:{labels:['超大单','大单','中单','小单'],values:[1.5,0.4,-0.3,-0.8]},
+      northHold:[7.8,7.9,7.7,8.0,8.1,8.0,8.2,8.3,8.2,8.4]
+    }
+  ,
+    analysis:{score:{total:76,valuation:70,technical:72,capital:78,fundamental:85},valuation:{pe:{value:24.8,industry:28.5,status:'undervalued'},pb:{value:8.2,industry:7.8,status:'overvalued'},peg:{value:1.45,status:'fair'}},technical:{trend:'sideways',ma20:'above',volume:'decrease',rsi:55},capitalScore:{mainForce:72,north:80,turnover:45},earnings:{epsGrowth:15.2,targetPrice:1580,consensus:'buy'},risk:{market:35,industry:30,financial:20,policy:40,liquidity:25}}
+  },
+  '688981':{
+    code:'688981',name:'中芯国际',market:'上交所 · 科创板',industry:'半导体代工',listDate:'2020-07-16',
+    price:58.42,changePct:3.87,mktCap:'4,650亿',pe:'88.5',low52:'36.80',high52:'63.50',
+    intro:'中芯国际集成电路制造有限公司是中国大陆技术最先进、规模最大的晶圆代工企业，提供0.35微米至14纳米及以下制程的晶圆代工与技术服务，是半导体国产替代战略的核心承载平台。',
+    business:['晶圆代工（逻辑/存储/模拟/功率等）','光罩制造与设计服务','凸块加工与测试服务'],
+    advantages:['大陆唯一可量产14nm及以下制程的代工厂','产能扩张明确：北京、深圳、上海临港基地持续爬坡','国产替代核心标的，客户绑定国内设计龙头'],
+    risks:['先进制程设备受出口管制影响','产能利用率波动与折旧压力','半导体行业周期波动风险'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[115,123,131,140],netProfit:[6.5,8.2,9.8,11.5],roe:[0.8,1.0,1.2,1.4],grossMargin:[14.5,16.2,17.8,18.5],debtRatio:[38.5,37.9,36.8,35.2]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-3.2,1.5,2.8,4.2,-1.8,2.1,3.5,5.1,2.9,6.4],
+      today:{labels:['超大单','大单','中单','小单'],values:[4.5,2.1,-0.8,-1.2]},
+      northHold:[5.1,5.3,5.2,5.6,5.8,6.0,5.9,6.2,6.4,6.8]
+    }
+  ,
+    analysis:{score:{total:74,valuation:58,technical:82,capital:85,fundamental:78},valuation:{pe:{value:88.5,industry:65.0,status:'overvalued'},pb:{value:4.2,industry:5.1,status:'undervalued'},peg:{value:1.2,status:'fair'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:72},capitalScore:{mainForce:85,north:82,turnover:78},earnings:{epsGrowth:32.0,targetPrice:68,consensus:'buy'},risk:{market:55,industry:42,financial:45,policy:68,liquidity:38}}
+  },
+  '002594':{
+    code:'002594',name:'比亚迪',market:'深交所 · 主板',industry:'新能源汽车',listDate:'2011-06-30',
+    price:258.40,changePct:1.85,mktCap:'7,520亿',pe:'22.3',low52:'185.00',high52:'286.00',
+    intro:'比亚迪股份有限公司是全球新能源汽车销量冠军，业务覆盖新能源汽车、动力电池（弗迪电池）、半导体（比亚迪半导体）、电子代工（比亚迪电子）等，是国内少数掌握电池、电机、电控全产业链核心技术的车企。',
+    business:['新能源汽车（王朝/海洋/腾势/仰望/方程豹）','动力电池（刀片电池、弗迪电池外供）','电子代工与半导体'],
+    advantages:['全球新能源车销量第一，规模效应显著','刀片电池+DM-i超级混动核心技术壁垒','海外市场快速扩张，东南亚/欧洲/拉美布局领先'],
+    risks:['国内价格战持续，毛利率承压','海外关税与贸易壁垒风险','智能化转型节奏面临竞对追赶'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[1620,1780,1950,2150],netProfit:[68,82,95,112],roe:[4.8,5.6,6.2,7.0],grossMargin:[19.5,20.2,20.8,21.5],debtRatio:[70.1,69.2,68.0,66.5]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[1.5,-2.3,0.8,3.1,-1.4,2.2,4.5,1.9,-0.6,3.8],
+      today:{labels:['超大单','大单','中单','小单'],values:[2.8,1.4,-0.5,-1.0]},
+      northHold:[6.8,6.9,6.6,7.0,7.2,7.1,7.4,7.6,7.5,7.8]
+    }
+  ,
+    analysis:{score:{total:79,valuation:72,technical:80,capital:82,fundamental:82},valuation:{pe:{value:22.3,industry:28.0,status:'undervalued'},pb:{value:5.5,industry:6.2,status:'undervalued'},peg:{value:0.9,status:'undervalued'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:65},capitalScore:{mainForce:82,north:78,turnover:72},earnings:{epsGrowth:25.5,targetPrice:285,consensus:'buy'},risk:{market:48,industry:52,financial:55,policy:50,liquidity:32}}
+  },
+  '300308':{
+    code:'300308',name:'中际旭创',market:'深交所 · 创业板',industry:'光模块',listDate:'2012-08-10',
+    price:118.60,changePct:4.12,mktCap:'1,330亿',pe:'28.5',low52:'62.00',high52:'138.00',
+    intro:'中际旭创股份有限公司是全球光模块行业龙头，主营高速光模块的研发、制造与销售，800G/1.6T光模块产品深度绑定北美头部云厂商，是AI算力产业链核心受益标的。',
+    business:['高速光模块（400G/800G/1.6T）','光通信组件与子系统','数通与电信市场双轮驱动'],
+    advantages:['800G光模块全球出货份额领先','深度绑定英伟达产业链及北美云厂商','1.6T产品卡位下一代算力需求'],
+    risks:['AI资本开支不及预期风险','产品快速迭代带来的研发压力','北美客户集中度较高'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[68,82,98,118],netProfit:[12.5,16.2,20.8,25.6],roe:[5.2,6.4,7.8,9.1],grossMargin:[32.1,33.5,34.2,35.0],debtRatio:[28.5,27.9,26.8,25.2]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-1.8,2.4,5.2,3.6,1.2,4.8,6.5,2.3,3.9,7.2],
+      today:{labels:['超大单','大单','中单','小单'],values:[5.6,2.4,-1.1,-1.8]},
+      northHold:[7.5,7.8,7.6,8.0,8.3,8.5,8.4,8.8,9.0,9.4]
+    }
+  ,
+    analysis:{score:{total:81,valuation:68,technical:88,capital:90,fundamental:82},valuation:{pe:{value:28.5,industry:35.0,status:'undervalued'},pb:{value:6.8,industry:8.5,status:'undervalued'},peg:{value:0.95,status:'undervalued'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:75},capitalScore:{mainForce:90,north:85,turnover:85},earnings:{epsGrowth:45.0,targetPrice:145,consensus:'buy'},risk:{market:60,industry:55,financial:40,policy:45,liquidity:42}}
+  },
+  '600036':{
+    code:'600036',name:'招商银行',market:'上交所 · 主板',industry:'银行',listDate:'2002-04-09',
+    price:35.28,changePct:0.38,mktCap:'8,890亿',pe:'6.2',low52:'29.50',high52:'38.90',
+    intro:'招商银行股份有限公司是中国领先的零售银行，凭借"零售之王"定位和财富管理业务优势，在股份行中盈利能力长期位居第一，是银行板块的核心权重资产。',
+    business:['零售银行业务（信用卡/按揭/财富管理）','公司银行业务','金融市场与资产管理业务'],
+    advantages:['零售客群质量高，负债成本行业领先','财富管理+AUM规模持续增长','不良率低、拨备覆盖率高，资产质量稳健'],
+    risks:['净息差收窄压力','房地产市场风险敞口','宏观经济下行影响资产质量'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[860,890,915,940],netProfit:[380,398,415,435],roe:[4.2,4.4,4.6,4.8],grossMargin:[0,0,0,0],debtRatio:[91.2,91.0,90.8,90.5]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[0.8,1.2,0.5,-0.4,1.5,0.9,2.1,0.6,1.8,0.7],
+      today:{labels:['超大单','大单','中单','小单'],values:[1.2,0.3,-0.2,-0.6]},
+      northHold:[9.8,9.9,9.7,10.0,10.2,10.1,10.4,10.6,10.5,10.8]
+    }
+  ,
+    analysis:{score:{total:72,valuation:82,technical:68,capital:70,fundamental:75},valuation:{pe:{value:6.2,industry:5.8,status:'fair'},pb:{value:0.95,industry:0.92,status:'fair'},peg:{value:0.75,status:'undervalued'}},technical:{trend:'sideways',ma20:'below',volume:'decrease',rsi:48},capitalScore:{mainForce:65,north:72,turnover:35},earnings:{epsGrowth:8.5,targetPrice:40,consensus:'buy'},risk:{market:38,industry:35,financial:55,policy:45,liquidity:30}}
+  },
+  '601318':{
+    code:'601318',name:'中国平安',market:'上交所 · 主板',industry:'保险',listDate:'2007-03-01',
+    price:52.16,changePct:0.95,mktCap:'9,500亿',pe:'8.4',low52:'41.00',high52:'56.80',
+    intro:'中国平安保险（集团）股份有限公司是中国领先的综合金融集团，业务覆盖保险、银行、资管、医疗健康等领域，"综合金融+医疗养老"战略持续深化，是A股保险板块的绝对龙头。',
+    business:['寿险与健康险（平安人寿/平安健康险）','财产保险（平安产险）','银行、资管与科技业务'],
+    advantages:['综合金融牌照齐全，客户交叉渗透率高','医疗养老生态构筑差异化竞争优势','代理人渠道改革成效显现，NBV恢复增长'],
+    risks:['寿险新业务价值增速不及预期','资本市场波动影响投资收益','长期低利率环境压降利差'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[2350,2420,2480,2560],netProfit:[380,402,425,450],roe:[3.8,4.0,4.2,4.5],grossMargin:[0,0,0,0],debtRatio:[89.5,89.2,88.9,88.5]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[1.1,0.6,1.8,2.2,-0.5,1.4,2.8,0.9,2.0,1.6],
+      today:{labels:['超大单','大单','中单','小单'],values:[1.8,0.6,-0.4,-0.7]},
+      northHold:[11.2,11.3,11.1,11.5,11.7,11.6,11.9,12.1,12.0,12.3]
+    }
+  ,
+    analysis:{score:{total:73,valuation:78,technical:70,capital:72,fundamental:76},valuation:{pe:{value:8.4,industry:10.2,status:'undervalued'},pb:{value:0.92,industry:1.1,status:'undervalued'},peg:{value:0.65,status:'undervalued'}},technical:{trend:'sideways',ma20:'above',volume:'increase',rsi:52},capitalScore:{mainForce:70,north:75,turnover:40},earnings:{epsGrowth:12.0,targetPrice:60,consensus:'buy'},risk:{market:40,industry:38,financial:58,policy:42,liquidity:28}}
+  },
+  '300059':{
+    code:'300059',name:'东方财富',market:'深交所 · 创业板',industry:'互联网金融',listDate:'2010-03-19',
+    price:22.86,changePct:-1.24,mktCap:'3,610亿',pe:'35.6',low52:'13.20',high52:'28.50',
+    intro:'东方财富信息股份有限公司是A股稀缺的互联网券商标的，旗下天天基金网与东方财富证券构筑"基金代销+证券经纪"双轮驱动，经纪业务市占率持续提升，是市场成交量的高弹性品种。',
+    business:['证券经纪与两融业务（东方财富证券）','基金代销（天天基金网）','金融数据终端与资讯服务'],
+    advantages:['互联网获客成本低，客户规模行业领先','基金代销保有量高，财富管理转型加速','市占率持续提升，市场回暖弹性大'],
+    risks:['市场成交量萎缩直接冲击业绩','基金代销费率下行压力','券商行业同质化竞争'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[32,38,45,52],netProfit:[22,26,31,36],roe:[4.1,4.8,5.5,6.2],grossMargin:[0,0,0,0],debtRatio:[68.2,67.5,66.8,65.9]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-2.5,3.2,5.8,-1.6,2.8,4.2,6.1,1.8,3.5,5.2],
+      today:{labels:['超大单','大单','中单','小单'],values:[4.2,1.8,-0.9,-1.5]},
+      northHold:[5.2,5.4,5.1,5.6,5.8,5.7,6.0,6.2,6.1,6.5]
+    }
+  ,
+    analysis:{score:{total:65,valuation:55,technical:62,capital:78,fundamental:58},valuation:{pe:{value:35.6,industry:32.0,status:'overvalued'},pb:{value:4.5,industry:4.2,status:'overvalued'},peg:{value:1.8,status:'overvalued'}},technical:{trend:'down',ma20:'below',volume:'decrease',rsi:42},capitalScore:{mainForce:78,north:65,turnover:88},earnings:{epsGrowth:10.0,targetPrice:26,consensus:'hold'},risk:{market:68,industry:55,financial:48,policy:52,liquidity:45}}
+  },
+  '688041':{
+    code:'688041',name:'海光信息',market:'上交所 · 科创板',industry:'CPU/算力芯片',listDate:'2022-08-12',
+    price:112.50,changePct:3.56,mktCap:'2,610亿',pe:'92.4',low52:'58.00',high52:'128.00',
+    intro:'海光信息技术股份有限公司是国内高端处理器（CPU+DCU）设计龙头，产品广泛应用于数据中心、服务器与智算中心，是信创与AI算力国产替代的核心标的。',
+    business:['服务器CPU（海光系列）','协处理器DCU（类GPU加速卡）','行业解决方案与生态适配'],
+    advantages:['国产x86 CPU技术壁垒高，生态兼容性好','DCU卡位AI算力国产替代蓝海','信创+智算双轮驱动需求旺盛'],
+    risks:['先进制程代工与供应受限风险','生态建设仍需时间','高估值对业绩兑现要求高'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[42,51,62,75],netProfit:[8.5,11.2,14.6,18.8],roe:[2.8,3.6,4.4,5.2],grossMargin:[58.2,59.1,60.0,60.8],debtRatio:[22.5,21.8,20.9,19.8]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-2.2,3.5,6.2,4.8,1.5,5.2,7.0,2.6,4.2,8.1],
+      today:{labels:['超大单','大单','中单','小单'],values:[6.2,2.8,-1.2,-2.0]},
+      northHold:[3.8,4.0,3.9,4.3,4.6,4.8,4.7,5.1,5.3,5.6]
+    }
+  ,
+    analysis:{score:{total:75,valuation:52,technical:85,capital:88,fundamental:80},valuation:{pe:{value:92.4,industry:75.0,status:'overvalued'},pb:{value:8.5,industry:9.2,status:'undervalued'},peg:{value:1.4,status:'fair'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:74},capitalScore:{mainForce:88,north:80,turnover:82},earnings:{epsGrowth:55.0,targetPrice:135,consensus:'buy'},risk:{market:62,industry:50,financial:42,policy:58,liquidity:48}}
+  },
+  '601138':{
+    code:'601138',name:'工业富联',market:'上交所 · 主板',industry:'AI服务器/代工',listDate:'2018-06-08',
+    price:24.62,changePct:2.08,mktCap:'4,890亿',pe:'18.2',low52:'13.80',high52:'29.40',
+    intro:'富士康工业互联网股份有限公司是全球最大的电子制造服务商之一，主营AI服务器、高速交换机、云计算设备及精密结构件制造，是英伟达AI服务器供应链的核心代工平台。',
+    business:['AI服务器与云网络设备（800G交换机）','消费电子精密制造（iPhone代工）','工业互联网与灯塔工厂'],
+    advantages:['AI服务器出货量全球领先，深度绑定英伟达','云计算+AI双轮驱动，业绩确定性高','制造规模与良率优势构筑成本护城河'],
+    risks:['客户集中度高（苹果/英伟达）','AI资本开支波动影响订单','代工模式毛利率偏低'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[1150,1280,1420,1580],netProfit:[38,45,54,63],roe:[3.5,4.0,4.6,5.1],grossMargin:[7.2,7.5,7.8,8.1],debtRatio:[55.8,55.0,54.2,53.5]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[0.6,1.8,3.2,2.1,-0.8,2.6,4.4,1.5,3.1,5.0],
+      today:{labels:['超大单','大单','中单','小单'],values:[3.6,1.5,-0.7,-1.2]},
+      northHold:[12.5,12.6,12.3,12.8,13.1,13.0,13.4,13.7,13.6,14.0]
+    }
+  ,
+    analysis:{score:{total:77,valuation:70,technical:78,capital:82,fundamental:78},valuation:{pe:{value:18.2,industry:22.0,status:'undervalued'},pb:{value:3.2,industry:4.0,status:'undervalued'},peg:{value:0.8,status:'undervalued'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:66},capitalScore:{mainForce:80,north:78,turnover:70},earnings:{epsGrowth:28.0,targetPrice:30,consensus:'buy'},risk:{market:55,industry:48,financial:45,policy:40,liquidity:35}}
+  },
+  '002475':{
+    code:'002475',name:'立讯精密',market:'深交所 · 主板',industry:'消费电子',listDate:'2010-09-15',
+    price:38.90,changePct:1.42,mktCap:'2,810亿',pe:'24.6',low52:'22.00',high52:'42.80',
+    intro:'立讯精密工业股份有限公司是全球领先的精密制造平台，主营连接器、声学器件、无线充电模组及整机组装（AirPods/Apple Watch/iPhone），并持续向汽车电子与通信高速互联领域拓展。',
+    business:['消费电子（声学/连接器/整机组装）','汽车电子（线束/连接系统）','通信高速互联（光模块/服务器互联）'],
+    advantages:['苹果核心供应商，整机组装份额持续提升','垂直整合能力强，自动化水平行业领先','汽车+通信打开第二增长曲线'],
+    risks:['苹果客户集中度风险','消费电子需求周期波动','新业务拓展不及预期'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[520,580,650,720],netProfit:[26,31,37,44],roe:[4.5,5.2,5.9,6.6],grossMargin:[11.2,11.8,12.4,12.9],debtRatio:[60.2,59.1,58.0,56.8]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-1.2,2.1,3.8,1.4,2.5,3.2,4.8,1.1,2.9,4.2],
+      today:{labels:['超大单','大单','中单','小单'],values:[3.1,1.3,-0.6,-1.1]},
+      northHold:[8.5,8.6,8.4,8.8,9.0,8.9,9.2,9.4,9.3,9.7]
+    }
+  ,
+    analysis:{score:{total:74,valuation:68,technical:75,capital:76,fundamental:78},valuation:{pe:{value:24.6,industry:28.0,status:'undervalued'},pb:{value:5.8,industry:6.5,status:'undervalued'},peg:{value:1.1,status:'fair'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:60},capitalScore:{mainForce:75,north:72,turnover:62},earnings:{epsGrowth:18.5,targetPrice:45,consensus:'buy'},risk:{market:45,industry:50,financial:48,policy:42,liquidity:30}}
+  },
+  '601012':{
+    code:'601012',name:'隆基绿能',market:'上交所 · 主板',industry:'光伏',listDate:'2012-04-11',
+    price:17.84,changePct:-0.89,mktCap:'1,350亿',pe:'-45.2',low52:'12.60',high52:'24.80',
+    intro:'隆基绿能科技股份有限公司是全球光伏硅片与组件龙头，曾长期保持单晶硅片全球出货第一，现正推进BC电池技术路线转型，是光伏行业周期底部的重要观察标的。',
+    business:['光伏硅片（单晶硅片全球领先）','光伏组件（Hi-MO系列）','BC电池与氢能装备（隆基氢能）'],
+    advantages:['BC电池技术路线领先，转换效率行业最高','全球化产能与渠道布局完善','硅片成本控制能力行业领先'],
+    risks:['光伏行业产能过剩、价格战持续','BC路线放量节奏不及预期','行业出清周期漫长'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[180,195,210,225],netProfit:[-8.5,-3.2,2.5,6.8],roe:[-1.2,-0.5,0.4,1.0],grossMargin:[12.5,14.8,16.2,17.5],debtRatio:[55.8,54.9,53.8,52.6]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-3.5,-1.2,0.8,-2.4,1.1,2.0,-1.8,0.5,1.6,-0.9],
+      today:{labels:['超大单','大单','中单','小单'],values:[-1.8,-0.6,0.8,1.2]},
+      northHold:[4.2,4.1,4.3,4.0,4.2,4.4,4.1,4.3,4.5,4.2]
+    }
+  ,
+    analysis:{score:{total:52,valuation:45,technical:38,capital:45,fundamental:42},valuation:{pe:{value:-45.2,industry:22.0,status:'overvalued'},pb:{value:2.1,industry:3.5,status:'undervalued'},peg:{value:null,status:'overvalued'}},technical:{trend:'down',ma20:'below',volume:'decrease',rsi:38},capitalScore:{mainForce:45,north:42,turnover:48},earnings:{epsGrowth:-15.0,targetPrice:16,consensus:'sell'},risk:{market:55,industry:75,financial:65,policy:45,liquidity:42}}
+  },
+  '603259':{
+    code:'603259',name:'药明康德',market:'上交所 · 主板',industry:'CXO医药外包',listDate:'2018-05-08',
+    price:62.35,changePct:1.18,mktCap:'1,820亿',pe:'18.9',low52:'38.00',high52:'78.50',
+    intro:'无锡药明康德新药开发股份有限公司是全球领先的医药研发外包（CRO/CDMO）一体化平台，为全球制药与生物科技公司提供端到端的新药研发与生产服务，是CXO行业龙头。',
+    business:['小分子药物发现与CRO服务','工艺研发与生产CDMO','生物药与细胞基因疗法服务'],
+    advantages:['一体化CRDMO平台全球竞争力强','在手订单饱满，新签订单持续增长','全球产能布局与客户粘性高'],
+    risks:['美国《生物安全法案》等政策风险','地缘政治对海外订单的影响','生物医药行业融资景气度波动'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[82,88,94,102],netProfit:[18.5,20.8,23.2,26.0],roe:[3.6,4.0,4.4,4.9],grossMargin:[38.5,39.2,39.8,40.5],debtRatio:[28.5,27.9,27.0,26.2]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[0.8,-1.5,2.2,1.6,0.9,2.8,1.2,2.4,0.7,1.9],
+      today:{labels:['超大单','大单','中单','小单'],values:[1.6,0.7,-0.3,-0.8]},
+      northHold:[7.2,7.3,7.1,7.5,7.7,7.6,7.9,8.1,8.0,8.3]
+    }
+  ,
+    analysis:{score:{total:66,valuation:62,technical:65,capital:68,fundamental:70},valuation:{pe:{value:18.9,industry:22.5,status:'undervalued'},pb:{value:2.8,industry:3.5,status:'undervalued'},peg:{value:1.15,status:'fair'}},technical:{trend:'sideways',ma20:'above',volume:'increase',rsi:54},capitalScore:{mainForce:65,north:70,turnover:55},earnings:{epsGrowth:16.0,targetPrice:72,consensus:'hold'},risk:{market:48,industry:55,financial:35,policy:62,liquidity:32}}
+  },
+  '601899':{
+    code:'601899',name:'紫金矿业',market:'上交所 · 主板',industry:'有色金属/黄金',listDate:'2008-04-25',
+    price:18.92,changePct:2.35,mktCap:'5,010亿',pe:'15.8',low52:'12.80',high52:'21.60',
+    intro:'紫金矿业集团股份有限公司是中国最大、全球前十的黄金与铜矿企业，主营黄金、铜、锌等金属矿产资源勘查、开采与冶炼，资源储量丰富，是顺周期资源股的旗舰标的。',
+    business:['黄金开采与冶炼','铜矿开采与冶炼（刚果金/西藏巨龙）','锌、锂等新能源金属'],
+    advantages:['铜金资源储量全球领先','海外并购整合能力强（卡莫阿-卡库拉等）','受益铜金价格中枢上移'],
+    risks:['金属价格波动风险','海外矿山运营与地缘政治风险','资本开支强度高'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[620,680,740,810],netProfit:[72,82,92,105],roe:[6.2,6.9,7.5,8.2],grossMargin:[24.5,25.2,26.0,26.8],debtRatio:[58.5,57.6,56.4,55.0]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[1.8,0.6,2.5,3.2,-0.9,1.7,3.4,1.2,2.6,3.9],
+      today:{labels:['超大单','大单','中单','小单'],values:[2.6,1.1,-0.5,-0.9]},
+      northHold:[9.5,9.6,9.4,9.8,10.0,9.9,10.2,10.4,10.3,10.7]
+    }
+  ,
+    analysis:{score:{total:78,valuation:76,technical:80,capital:78,fundamental:78},valuation:{pe:{value:15.8,industry:18.5,status:'undervalued'},pb:{value:3.5,industry:4.2,status:'undervalued'},peg:{value:0.7,status:'undervalued'}},technical:{trend:'up',ma20:'above',volume:'increase',rsi:70},capitalScore:{mainForce:78,north:76,turnover:65},earnings:{epsGrowth:22.0,targetPrice:22,consensus:'buy'},risk:{market:58,industry:45,financial:42,policy:38,liquidity:30}}
+  },
+  '000725':{
+    code:'000725',name:'京东方A',market:'深交所 · 主板',industry:'半导体显示',listDate:'2001-01-12',
+    price:4.28,changePct:0.47,mktCap:'1,630亿',pe:'22.5',low52:'3.30',high52:'4.90',
+    intro:'京东方科技集团股份有限公司是全球半导体显示面板出货面积第一的龙头，主营LCD/OLED显示屏的研发、制造与销售，并积极布局物联网创新、智慧医工等转型业务。',
+    business:['LCD面板（大尺寸/中小尺寸）','OLED柔性屏（成都/绵阳产线）','物联网创新与智慧医工'],
+    advantages:['全球LCD出货面积第一，行业话语权强','OLED产能爬坡，国产替代加速','面板周期底部反转弹性大'],
+    risks:['面板价格周期波动','OLED良率与折旧压力','行业资本开支竞争'],
+    financial:{periods:['2025Q1','2025Q2','2025Q3','2025Q4'],revenue:[450,480,510,545],netProfit:[8.5,11.2,14.8,18.5],roe:[0.8,1.1,1.4,1.8],grossMargin:[12.8,14.5,16.2,17.8],debtRatio:[54.8,54.0,53.2,52.4]},
+    capital:{
+      dates:['07-29','07-30','07-31','08-03','08-04','08-05','08-06','08-07','08-08','08-11'],
+      mainForce:[-0.8,1.2,0.5,2.1,-1.0,0.8,1.6,-0.4,1.1,0.9],
+      today:{labels:['超大单','大单','中单','小单'],values:[1.0,0.4,-0.2,-0.5]},
+      northHold:[6.2,6.3,6.1,6.5,6.6,6.5,6.8,6.9,6.8,7.1]
+    }
+  ,
+    analysis:{score:{total:68,valuation:70,technical:62,capital:60,fundamental:65},valuation:{pe:{value:22.5,industry:28.0,status:'undervalued'},pb:{value:1.2,industry:1.5,status:'undervalued'},peg:{value:0.9,status:'undervalued'}},technical:{trend:'sideways',ma20:'above',volume:'decrease',rsi:52},capitalScore:{mainForce:58,north:60,turnover:45},earnings:{epsGrowth:35.0,targetPrice:5.2,consensus:'hold'},risk:{market:50,industry:62,financial:45,policy:35,liquidity:28}}
+  }
+};
 
-
-
+/* ===== 模块定义 ===== */
+var MODULES=[
+  {id:'report',name:'盘前核心情报日报',icon:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/>',iconBg:'mi-report',desc:'每个交易日 08:30 自动推送，覆盖宏观热点、美股港股复盘、A股前瞻与资金动向四大板块。',badgeKey:'report'},
+  {id:'market',name:'市场速览看板',icon:'<path d="M3 3v18h18M7 14l4-4 4 4 5-7"/>',iconBg:'mi-market',desc:'美股 / 港股 / A股 三大市场指数实时速览，指数涨跌幅柱状图与多市场走势折线图对比。',badgeKey:'market'},
+  {id:'capital',name:'资金动向监控',icon:'<path d="M12 1v22M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/>',iconBg:'mi-capital',desc:'沪深股通近5日成交额折线图、沪深对比柱状图、主力资金流向柱状图。',badgeKey:'capital'},
+  {id:'macro',name:'宏观日历与公告',icon:'<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>',iconBg:'mi-macro',desc:'今日宏观经济数据时间轴（中国/美国/欧洲），近期重大政策与上市公司事件速递。',badgeKey:'macro'},
+  {id:'watch',name:'自选股',icon:'<path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>',iconBg:'mi-watch',desc:'自选股池管理，个股三重视角：公司介绍、财报状况（营收/净利/指标）、资金分析（主力/北向/大单）。',badgeKey:'watch'},
+  {id:'deep',name:'深度投研',icon:'<path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/>',iconBg:'mi-deep',desc:'个股基本面深度体检：九维全景（业务/财务/盈利质量/估值/股东筹码/机构观点/产业链/风险/综合评分），基于 iFinD 真实财报与资料。',badgeKey:'deep'},
+  {id:'simulate',name:'事件推演',icon:'<path d="M12 3l7 4v5c0 4.4-3 8-7 9-4-1-7-4.6-7-9V7z"/><path d="M9.5 12l2 2 3.5-3.5"/>',iconBg:'mi-simulate',desc:'宏观与地缘事件沙盘推演：事件定性 → 传导路径 → 受益受损板块 → 核心标的 → 三情景推演与观察信号。',badgeKey:'simulate'},
+  {id:'settings',name:'设置与备份',icon:'<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/>',iconBg:'mi-settings',desc:'数据导出 / 导入恢复 / 备份管理，本地数据存储于浏览器，建议定期备份。',badgeKey:'settings'}
+];
 
 
 /* ===== Init ===== */
